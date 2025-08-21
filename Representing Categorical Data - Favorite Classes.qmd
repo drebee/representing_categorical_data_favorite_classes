@@ -1,0 +1,22 @@
+---
+title: "Representing Categorical Data - Favorite Classes"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(googlesheets4)
+library(janitor)
+```
+
+```{r}
+url = "https://docs.google.com/spreadsheets/d/1JmVLUjtSwcuxApJXFFYu7sbre7s0pHjOfz2bmnwDMnQ/edit?usp=sharing"
+df = read_sheet(url) |> 
+  clean_names()
+```
+
+```{r}
+df |> 
+  ggplot()
+```
+
